@@ -15,10 +15,10 @@ LIGHT_NAME = "Desk Lamp"
 ######### 
 
 hue = Bridge(HUE_BRIDGE_IP)
+hue.connect() #### MUST PRESS HUE BRIDGE BUTTON < 30S BEFORE RUNNING #### 
 
 light_objs = hue.get_light_objects('name')
 light = light_objs[LIGHT_NAME]
-
 
 domain = input("Please enter a domain to resolve (or press enter for default): ")
 
@@ -68,10 +68,10 @@ if(ip_lookup.response_full):
 
     # Flash
     for i in range(5):
-        desk.brightness = 254
+        light.brightness = 254
         sleep(0.25)
         
-        desk.brightness = 0
+        light.brightness = 0
         sleep(0.25)
 
     # Reset lights to original state

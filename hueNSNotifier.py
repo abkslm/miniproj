@@ -33,7 +33,7 @@ print("Attempting to resolve", domain, "\n")
 
 while (not ip_lookup.response_full):
     print(domain, "could not be resolved...")
-    print("Maintaining state for Hue light \"", desk.name, "\"", sep='')
+    print("Maintaining state for Hue light \"", light.name, "\"", sep='')
     
     print("Sleeping for 30 seconds", end="")
     for i in range(30):
